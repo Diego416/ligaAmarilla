@@ -1,0 +1,29 @@
+extends layout
+
+block content
+  h1 Selecciona tu premio
+
+  div(class="row")
+    ul(class="carousel")
+      li(class="item active")
+        img(class="image" src="/images/casa.jpg" onclick="select('audioHouse', 'Apartamento nuevo')")
+      li(class="item")
+        img(class="image" src="/images/carro.png" onclick="select('audioCar', 'Carro 0 kilometros')")
+      li(class="item")
+        img(class="image" src="/images/champions.jpg" onclick="select('audioChampions', 'Boletos para la final de la champions league')")
+
+  h2(id="descripcion")
+    span Apartamento nuevo
+  
+  button(type="button" class="btn btn-info") Success
+
+  //-
+    div(class="controls")
+      a(href="#" class="previous" onclick="$.playSound('/sounds/door.mp3')")
+        img(src="/images/prev.png")
+      a(href="#" class="next" onclick="$.playSound('/sounds/champions.mp3')")
+        img(src="/images/next.png")
+
+  audio(id="audioHouse" src="/sounds/door.mp3")
+  audio(id="audioCar" src="/sounds/car.mp3")
+  audio(id="audioChampions" src="/sounds/champions.mp3")
