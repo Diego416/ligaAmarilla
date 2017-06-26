@@ -1,0 +1,25 @@
+extends layout
+
+block content
+
+  form(class="form-signup" action="" method="post")
+    h1(class="form-signup-heading") Registro
+    br
+    input(type="text" id="txtCedula" class="input-form" name="txtCedula" class="form-control" placeholder="Cedula" required="" autofocus="")
+    br
+    input(type="text" id="txtNombre" class="input-form" name="txtNombre" class="form-control" placeholder="Nombre" required="")
+    br
+    input(type="text" id="txtApellido" class="input-form" name="txtApellido" class="form-control" placeholder="Apellido" required="")
+    br
+    input(type="text" id="txtCelular" class="input-form" name="txtCelular" class="form-control" placeholder="Celular" required="")
+    br
+    input(type="email" id="txtEmail" class="input-form" name="txtEmail" class="form-control" placeholder="Email" required="")
+    br
+    input(type="text" id="txtUserName" class="input-form" name="txtUserName" class="form-control" placeholder="Usuario" required="")
+    br
+    input(type="password" id="txtPassword" class="input-form" name="txtPassword" class="form-control" placeholder="Contraseña" required="")
+    br
+    input(type="password" id="txtConfirmPassword" class="input-form" name="txtConfirmPassword" class="form-control" placeholder="Repita la contraseña" required="" onkeyup="confirmar()")
+    br
+    button(id="btnSignUp" class="btn btn-warning" type="submit") Registrarse    
+  p(class="errorMessage")= errorMessage

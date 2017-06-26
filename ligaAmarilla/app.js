@@ -6,6 +6,8 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var index = require('./routes/index');
+var users = require('./routes/users');
+var premio = require('./routes/premio');
 
 /*
 //How to play a sound
@@ -31,6 +33,8 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '/')));
 
 app.use('/', index);
+app.use('/users', users);
+app.use('/premio', premio);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -52,4 +56,4 @@ app.use(function(err, req, res, next) {
 
 module.exports = app;
 //Para ejecutar la aplicación, ejecutar el siguiente comando:
-//SET DEBUG=express-locallibrary-tutorial:* & npm run devstart
+//SET DEBUG=ligaAmarilla:* & npm run devstart

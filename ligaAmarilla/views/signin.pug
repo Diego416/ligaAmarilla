@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  form(class="form-signin" action="" method="post")
+    h1(class="form-signin-heading") Inicio de sesion
+    br
+    input(type="text" id="txtUserName" name="txtUserName"  class="input-form" class="form-control" placeholder="Usuario" required="" autofocus="")
+    br
+    input(type="password" id="txtPassword" name="txtPassword" class="input-form" class="form-control" placeholder="Contraseña" required="")
+    br
+    br
+    button(id="btnSignIn" class="btn btn-lg btn-warning" type="submit") Iniciar sesion   
+  p(class="errorMessage")= errorMessage

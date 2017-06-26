@@ -44,3 +44,35 @@ h2 {
     width: 100%;
     height: 100%;
 }
+
+.previous {
+    position: absolute;
+    top: 50%;
+    left: 22%;
+}
+
+.next {
+    position: absolute;
+    top: 50%;
+    right: 22%;
+}
+
+.input-form {
+    margin-left: 30%;
+    width: 40%;
+}
+
+.input-form:focus {
+    outline: none !important;
+    border: 1px solid yellow;
+    box-shadow: 0 0 10px #DFFC03;
+}
+
+.index-content p {
+    font-size: 20px;
+    color: #000;
+}
+
+.index-content {
+    padding: 0% 20%;
+}

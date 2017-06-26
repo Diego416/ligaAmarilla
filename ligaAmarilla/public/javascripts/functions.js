@@ -22,3 +22,13 @@ function select(audioName, description) {
     //document.getElementById('descripcion').innerHTML(description);
     document.getElementById('descripcion').getElementsByTagName('span')[0].innerHTML = description;
 }
+
+function confirmar() {
+    var txtPassword = document.getElementById("txtPassword")
+    var txtConfirmPassword = document.getElementById("txtConfirmPassword");
+    if (txtPassword.value != txtConfirmPassword.value) {
+        txtConfirmPassword.setCustomValidity("Las contraseñas no coinciden");
+    } else {
+        txtConfirmPassword.setCustomValidity('');
+    }
+}

@@ -1,29 +1,21 @@
 extends layout
 
 block content
-  h1 Selecciona tu premio
-
-  div(class="row")
-    ul(class="carousel")
-      li(class="item active")
-        img(class="image" src="/public/images/casa.jpg" onclick="select('audioHouse', 'Apartamento nuevo')")
-      li(class="item")
-        img(class="image" src="/public/images/carro.png" onclick="select('audioCar', 'Carro 0 kilometros')")
-      li(class="item")
-        img(class="image" src="/public/images/champions.jpg" onclick="select('audioChampions', 'Boletos para la final de la champions league')")
-      
-  h2(id="descripcion")
-    span Apartamento nuevo
-    
-  button(type="button" class="btn btn-success") Confirmar
-
-  audio(id="audioHouse" src="/public/sounds/door.mp3")
-  audio(id="audioCar" src="/public/sounds/car.mp3")
-  audio(id="audioChampions" src="/public/sounds/champions.mp3")
-
-  //-
-    div(class="controls")
-      a(href="#" class="previous" onclick="$.playSound('/sounds/door.mp3')")
-        img(src="/images/prev.png")
-      a(href="#" class="next" onclick="$.playSound('/sounds/champions.mp3')")
-        img(src="/images/next.png")
+  h1(class="cover-heading") Liga amarilla
+  div(class="index-content")
+    p Liga amarilla es un sitio web en la cual podrás apostar por los marcadores de las 
+        |ligas de fútbol más importantes del mundo y competir por increibles premios como una casa nueva,
+        |un carro 0 kilometros, boletos para la final de la Uefa Champions League y mucho más.
+        br
+        br
+        |Solo tienes que registrarte e ingresar un pin que puedes adquirir en cualquiera de los taxis de la
+        |ciudad suscritos a nuestra compañía, recuerda que puedes comprar la cantidad de pines que quieras y
+        |en cualquier momento, estos tienen un valor de tan solo $1000.
+        br
+        br
+    p(class="lead")
+    a(href="/users/signin" class="btn btn-lg btn-warning") Iniciar sesión
+    br
+    br
+    p ¿Aún no tienes una cuenta?
+    a(href="/users/signup" class="btn btn-lg btn-warning") Registrate gratis

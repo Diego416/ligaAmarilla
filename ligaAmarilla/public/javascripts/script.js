@@ -37,13 +37,13 @@
 
 
         /* Previous button */
-        $('.controls .previous').click(function(e) {
+        $('.previous').click(function(e) {
             carousel.cycleActive('previous');
             e.preventDefault();
         });
 
         /* Next button */
-        $('.controls .next').click(function(e) {
+        $('.next').click(function(e) {
             carousel.cycleActive('next');
             e.preventDefault();
         });
